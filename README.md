@@ -40,7 +40,7 @@
 - [ ] Add categories to narrow down word selection
 - [ ] Add better art to gallows/hanging man
 - [ ] Deploy project
-- [ ]
+- [ ] Add hint button using word definition
 
 ---
 
