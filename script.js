@@ -4,11 +4,15 @@ let word = document.querySelector('.word')
 let hiddenWord = 'bronco'
 let wordArray = []
 
-let turns = 10
+let chances = 10
 
 let hiddenArray = () => {
   for (let i = 0; i < hiddenWord.length; i++) {
     wordArray.push(hiddenWord[i])
+    const letters = document.createElement('div')
+    letters.classList.add('letters')
+    letters.innerHTML = wordArray[i]
+    word.appendChild(letters)
     console.log(wordArray)
   }
 }
@@ -27,6 +31,8 @@ let letterSelect = () => {
         newDiv.classList.add('letter')
         newDiv.innerHTML = letter
         word.appendChild(newDiv)
+      } else {
+        chances--
       }
     })
   }
