@@ -5,6 +5,9 @@ let hiddenWord = 'bronco'
 let wordArray = []
 
 let chances = 10
+let chancesDisplay = document.querySelector('.chances')
+
+let letters = document.querySelector('.letters')
 
 let hiddenArray = () => {
   for (let i = 0; i < hiddenWord.length; i++) {
@@ -27,12 +30,13 @@ let letterSelect = () => {
       let result = wordArray.includes(letter)
       console.log(result)
       if (result == true) {
-        const newDiv = document.createElement('div')
-        newDiv.classList.add('letter')
-        newDiv.innerHTML = letter
-        word.appendChild(newDiv)
+        // const newDiv = document.createElement('div')
+        // newDiv.classList.add('letter')
+        // newDiv.innerHTML = letter
+        // word.appendChild(newDiv)
       } else {
         chances--
+        chancesDisplay.innerHTML = `Chances left ${chances}`
       }
     })
   }

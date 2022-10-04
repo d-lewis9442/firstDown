@@ -9,9 +9,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 10px;
+
   
   width: 600px;
   font-size: 40px;
+}
+
+.letters {
+  opacity: 0;
 }
 
 .keyboard {
