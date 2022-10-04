@@ -35,11 +35,12 @@ let letterSelect = () => {
         renderLetter(letter)
         guesses.push(letter)
         checkWin()
+      } else if (winner === true) {
+        return
       } else {
         chances--
         chancesDisplay.innerHTML = `Chances left ${chances}`
         guesses.push(letter)
-        checkWin()
       }
     })
   }
@@ -66,14 +67,11 @@ let checkWin = () => {
     if (winString === wordString) {
       winner = true
       message.innerText = 'Winner!'
-    } else if (chances === 0 && winner === false) {
+    } else if (chances <= 0 && winner === false) {
       console.log('lose')
       message.innterText = 'You lose!'
+      return
     }
-    // if (item.innerText !== '_') {
-    //   //console.log(winner)
-    //   winner = false
-    // }
   })
 
   // if (chances === 0 && winner === false) {
