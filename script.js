@@ -42,6 +42,7 @@ let letterSelect = () => {
         return
       } else if (chances === 0 && winner === false) {
         message.innerText = 'You lose!'
+        restart.style.opacity = 1
         return
       } else {
         chances--
@@ -78,13 +79,14 @@ let checkWin = () => {
 }
 
 const restartGame = () => {
-  const letterDivs = document.querySelectorAll('.letters')
+  const letters = document.querySelectorAll('.letters')
   winner = false
   chances = 10
   chancesDisplay.innerHTML = `Chances left ${chances}`
   restart.style.opacity = 0
   message.innerHTML = ''
-  letterDivs.innerText = '_'
+  guesses = []
+  wordArray = []
 }
 
 letterSelect()
