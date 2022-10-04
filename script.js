@@ -29,6 +29,7 @@ let letterSelect = () => {
       let letter = keys[i].innerHTML.toLowerCase()
       let guessed = guesses.includes(letter)
       let result = wordArray.includes(letter)
+      const message = document.querySelector('.message')
       if (guessed === true) {
         return
       } else if (result === true) {
@@ -36,6 +37,9 @@ let letterSelect = () => {
         guesses.push(letter)
         checkWin()
       } else if (winner === true) {
+        return
+      } else if (chances === 0 && winner === false) {
+        message.innerText = 'You lose!'
         return
       } else {
         chances--
@@ -59,7 +63,6 @@ let checkWin = () => {
   const message = document.querySelector('.message')
   const letters = document.querySelectorAll('.letters')
   let winArray = []
-  //console.log(wordArray)
   letters.forEach((item) => {
     winArray.push(item.innerText)
     let winString = winArray.toString()
@@ -67,17 +70,8 @@ let checkWin = () => {
     if (winString === wordString) {
       winner = true
       message.innerText = 'Winner!'
-    } else if (chances <= 0 && winner === false) {
-      console.log('lose')
-      message.innterText = 'You lose!'
-      return
     }
   })
-
-  // if (chances === 0 && winner === false) {
-  //   message.innerText = 'Out of guesses - Game Over!'
-  //   return
-  // }
 }
 
 letterSelect()
