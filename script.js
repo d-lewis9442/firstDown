@@ -2,10 +2,12 @@ const keys = document.querySelectorAll('.key')
 const keyboard = document.querySelector('.keyboard')
 const word = document.querySelector('.word')
 const chancesDisplay = document.querySelector('.chances')
+const restart = document.querySelector('.restart')
+const message = document.querySelector('.message')
 
-let hiddenWord = 'broncos'
-// let hiddenWords = ['broncos', 'cowboys', 'packers']
-// let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
+//let hiddenWord = 'broncos'
+let hiddenWords = ['broncos', 'cowboys', 'packers']
+let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
 let wordArray = []
 let guesses = []
 let chances = 10
@@ -43,7 +45,7 @@ let letterSelect = () => {
         return
       } else {
         chances--
-        chancesDisplay.innerHTML = `Chances left ${chances}`
+        chancesDisplay.innerText = `Chances left ${chances}`
         guesses.push(letter)
       }
     })
@@ -70,9 +72,22 @@ let checkWin = () => {
     if (winString === wordString) {
       winner = true
       message.innerText = 'Winner!'
+      restart.style.opacity = 1
     }
   })
 }
 
+const restartGame = () => {
+  const letterDivs = document.querySelectorAll('.letters')
+  winner = false
+  chances = 10
+  chancesDisplay.innerHTML = `Chances left ${chances}`
+  restart.style.opacity = 0
+  message.innerHTML = ''
+  letterDivs.innerText = '_'
+}
+
 letterSelect()
 hiddenArray()
+
+restart.addEventListener('click', restartGame)
