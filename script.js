@@ -8,9 +8,8 @@ let hiddenWord = 'broncos'
 // let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
 let wordArray = []
 let guesses = []
-let rightWord = []
 let chances = 10
-let letter
+let winner = false
 
 chancesDisplay.innerHTML = `Chances left ${chances}`
 
@@ -35,10 +34,12 @@ let letterSelect = () => {
       } else if (result === true) {
         renderLetter(letter)
         guesses.push(letter)
+        checkWin()
       } else {
         chances--
         chancesDisplay.innerHTML = `Chances left ${chances}`
         guesses.push(letter)
+        checkWin()
       }
     })
   }
@@ -51,6 +52,34 @@ let renderLetter = (letter) => {
       letterDivs[index].innerText = letter
     }
   })
+}
+
+let checkWin = () => {
+  const message = document.querySelector('.message')
+  const letters = document.querySelectorAll('.letters')
+  let winArray = []
+  //console.log(wordArray)
+  letters.forEach((item) => {
+    winArray.push(item.innerText)
+    let winString = winArray.toString()
+    let wordString = wordArray.toString()
+    if (winString === wordString) {
+      winner = true
+      message.innerText = 'Winner!'
+    } else if (chances === 0 && winner === false) {
+      console.log('lose')
+      message.innterText = 'You lose!'
+    }
+    // if (item.innerText !== '_') {
+    //   //console.log(winner)
+    //   winner = false
+    // }
+  })
+
+  // if (chances === 0 && winner === false) {
+  //   message.innerText = 'Out of guesses - Game Over!'
+  //   return
+  // }
 }
 
 letterSelect()

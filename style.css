@@ -16,7 +16,8 @@ body {
   font-size: 40px;
 }
 
-.letters {
+.message {
+  font-size: 30px;
 }
 
 .keyboard {
