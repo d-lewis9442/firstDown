@@ -70,6 +70,7 @@ let letterSelect = () => {
         renderLetter(letter)
         guesses.push(letter)
         checkWin()
+        colorKeys()
       } else if (winner === true) {
         return
       } else if (chances === 0 && winner === false) {
@@ -82,9 +83,22 @@ let letterSelect = () => {
         chances--
         chancesDisplay.innerText = `Yards left ${chances}`
         guesses.push(letter)
+        colorKeys()
       }
     })
   }
+}
+
+let colorKeys = () => {
+  guesses.forEach((item) => {
+    document.querySelector(`#${item}`).style.background = 'gray'
+  })
+}
+
+let clearKeys = () => {
+  guesses.forEach((item) => {
+    document.querySelector(`#${item}`).style.background = 'initial'
+  })
 }
 
 let renderLetter = (letter) => {
@@ -127,6 +141,7 @@ const restartGame = () => {
   chancesDisplay.innerHTML = `Yards left ${chances}`
   restart.style.opacity = 0
   message.innerHTML = ''
+  clearKeys()
   guesses = []
   wordArray = []
   word.innerHTML = ''
