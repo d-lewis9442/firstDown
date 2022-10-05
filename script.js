@@ -5,11 +5,12 @@ const chancesDisplay = document.querySelector('.chances')
 const restart = document.querySelector('.restart')
 const message = document.querySelector('.message')
 
-// let hiddenWord = 'broncos'
 let wordArray = []
 let guesses = []
 let chances = 10
 let winner = false
+let wins = 0
+let losses = 0
 
 chancesDisplay.innerHTML = `Yards left ${chances}`
 
@@ -72,8 +73,10 @@ let letterSelect = () => {
       } else if (winner === true) {
         return
       } else if (chances === 0 && winner === false) {
+        losses++
         message.innerText = 'Offense got a First Down! You lose!'
         restart.style.opacity = 1
+        score()
         return
       } else {
         chances--
@@ -103,10 +106,19 @@ let checkWin = () => {
     let wordString = wordArray.toString()
     if (winString === wordString) {
       winner = true
+      wins++
       message.innerText = 'You stopped the offense! You Win!'
       restart.style.opacity = 1
+      score()
     }
   })
+}
+
+const score = () => {
+  const winBoard = document.querySelector('.wins')
+  const lossBoard = document.querySelector('.losses')
+  winBoard.innerText = wins
+  lossBoard.innerText = losses
 }
 
 const restartGame = () => {
