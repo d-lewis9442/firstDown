@@ -87,7 +87,6 @@ let checkWin = () => {
 }
 
 const restartGame = () => {
-  const letters = document.querySelectorAll('.letters')
   winner = false
   chances = 10
   chancesDisplay.innerHTML = `Chances left ${chances}`
@@ -95,7 +94,6 @@ const restartGame = () => {
   message.innerHTML = ''
   guesses = []
   wordArray = []
-  //letters.innerText = '_'
   word.innerHTML = ''
   hiddenArray()
 }

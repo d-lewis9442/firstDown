@@ -3,6 +3,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Oswald', sans-serif;
+
 }
 
 .word {
@@ -36,6 +38,7 @@ body {
 
 
   border: 5px solid black;
+  border-radius: 10px;
   padding: 5px;
   height: 350px;
   width: 900px;

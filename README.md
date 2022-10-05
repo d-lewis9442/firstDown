@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### A simple Hangman game using Javascript, HTML, and CSS that is currently in progress.
+#### A simple word guessing game using Javascript, HTML, and CSS that is currently in progress.
 
 ---
 
@@ -25,7 +25,7 @@
 
 ### **_Getting Started_**
 
-##### Simple one player game of hangman.
+##### Simple word guessing game to by styled after .
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/mw90XVGC/hangman).
 
