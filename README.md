@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### A simple, NFL Themed word guessing game using Javascript, HTML, and CSS that is currently in progress. Stop the offense from getting a first down by guessing the word.
+#### A simple, NFL Themed word guessing game using Javascript, HTML, and CSS that is currently in progress. Stop the offense from getting a first down by guessing the word. This games is best suited for desktop use.
 
 ---
 
@@ -43,7 +43,7 @@
 
 ### **_Screenshots_**
 
-![correctguess](/images/correctguess1.png)
+![correctguess](/Images/correctguess1.png)
 
 ![incorrectguess](/Images/incorrectguess1.png)
 
