@@ -43,11 +43,19 @@
 
 ### **_Screenshots_**
 
+##### Correct Guess
+
 ![correctguess](/Images/correctguess1.png)
+
+##### Incorrect Guess
 
 ![incorrectguess](/Images/incorrectguess1.png)
 
+##### Win Message
+
 ![win](/Images/win1.png)
+
+##### Lose Message
 
 ![lose](/Images/lose1.png)
 
@@ -66,7 +74,7 @@
 
 ##### General Assembly: [Choose Your Path](https://generalassemb.ly/)
 
-#####
+##### Wallpaper Safari: [wallpapersafari.com] (https://wallpapersafari.com/)
 
 #####
 

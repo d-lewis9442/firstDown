@@ -9,6 +9,10 @@ body {
   background-image: url(Images/field.png);
 }
 
+.instructions {
+  font-size: 20px;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -37,6 +41,10 @@ body {
   margin: 10px;
   border: 3px solid white;
   border-radius: 4px;
+}
+
+a {
+  color: white
 }
 
 .keyboard {
