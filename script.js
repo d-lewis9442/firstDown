@@ -11,7 +11,7 @@ let guesses = []
 let chances = 10
 let winner = false
 
-chancesDisplay.innerHTML = `Chances left ${chances}`
+chancesDisplay.innerHTML = `Yards left ${chances}`
 
 let hiddenArray = () => {
   let hiddenWords = [
@@ -21,7 +21,30 @@ let hiddenArray = () => {
     'chiefs',
     'raiders',
     'steelers',
-    'vikings'
+    'vikings',
+    'rams',
+    'bills',
+    'patriots',
+    'giants',
+    'cardinals',
+    'seahawks',
+    'bears',
+    'buccaneers',
+    'eagles',
+    'panthers',
+    'dolphins',
+    'browns',
+    'bengals',
+    'ravens',
+    'saints',
+    'jets',
+    'chargers',
+    'titans',
+    'colts',
+    'lions',
+    'jaguars',
+    'texans',
+    'commanders'
   ]
   let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
   for (let i = 0; i < hiddenWord.length; i++) {
@@ -49,12 +72,12 @@ let letterSelect = () => {
       } else if (winner === true) {
         return
       } else if (chances === 0 && winner === false) {
-        message.innerText = 'You lose!'
+        message.innerText = 'Offense got a First Down! You lose!'
         restart.style.opacity = 1
         return
       } else {
         chances--
-        chancesDisplay.innerText = `Chances left ${chances}`
+        chancesDisplay.innerText = `Yards left ${chances}`
         guesses.push(letter)
       }
     })
@@ -80,7 +103,7 @@ let checkWin = () => {
     let wordString = wordArray.toString()
     if (winString === wordString) {
       winner = true
-      message.innerText = 'Winner!'
+      message.innerText = 'You stopped the offense! You Win!'
       restart.style.opacity = 1
     }
   })
@@ -89,7 +112,7 @@ let checkWin = () => {
 const restartGame = () => {
   winner = false
   chances = 10
-  chancesDisplay.innerHTML = `Chances left ${chances}`
+  chancesDisplay.innerHTML = `Yards left ${chances}`
   restart.style.opacity = 0
   message.innerHTML = ''
   guesses = []

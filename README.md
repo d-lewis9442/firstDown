@@ -1,4 +1,4 @@
-# Hangman
+# First Down
 
 ## Date: 10/1/2022
 
@@ -10,22 +10,32 @@
 
 ### **_Description_**
 
-#### A simple word guessing game using Javascript, HTML, and CSS that is currently in progress.
+#### A simple, NFL Themed word guessing game using Javascript, HTML, and CSS that is currently in progress. Stop the offense from getting a first down by guessing the word.
 
 ---
 
 ### **_Technologies Used_**
 
-- Vanllia Javascript
+- Vanilla Javascript
 - HTML
 - CSS
 - Trello
 
 ---
 
-### **_Getting Started_**
+### **_Instructions_**
 
-##### Simple word guessing game to by styled after .
+##### All words are NFL Team Names e.g., Broncos, Cowboys, Browns.
+
+##### To start click on a letter on the keyboard.
+
+##### Each correct guess will place the letter in the blanks.
+
+##### Each incorrect guess will move the offense one yard closer to a first down.
+
+##### If a letter is clicked again this will not count against your misses.
+
+##### You have 10 misses or 10 yards before the offense gets a first down.
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/mw90XVGC/hangman).
 
@@ -33,14 +43,22 @@
 
 ### **_Screenshots_**
 
+![correctguess](/images/correctguess1.png)
+
+![incorrectguess](/Images/incorrectguess1.png)
+
+![win](/Images/win1.png)
+
+![lose](/Images/lose1.png)
+
 ---
 
 ### **_Future Updates_**
 
-- [ ] Add categories to narrow down word selection
-- [ ] Add better art to gallows/hanging man
+- [ ] Add artwork for First Down
 - [ ] Deploy project
-- [ ] Add hint button using word definition
+- [ ] Add hint button
+- [ ] Link to to API for NFL related words
 
 ---
 
