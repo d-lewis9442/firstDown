@@ -6,8 +6,6 @@ const restart = document.querySelector('.restart')
 const message = document.querySelector('.message')
 
 // let hiddenWord = 'broncos'
-let hiddenWords = ['broncos', 'cowboys', 'packers']
-let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
 let wordArray = []
 let guesses = []
 let chances = 10
@@ -16,6 +14,16 @@ let winner = false
 chancesDisplay.innerHTML = `Chances left ${chances}`
 
 let hiddenArray = () => {
+  let hiddenWords = [
+    'broncos',
+    'cowboys',
+    'packers',
+    'chiefs',
+    'raiders',
+    'steelers',
+    'vikings'
+  ]
+  let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
   for (let i = 0; i < hiddenWord.length; i++) {
     wordArray.push(hiddenWord[i])
     const letters = document.createElement('div')
@@ -87,7 +95,7 @@ const restartGame = () => {
   message.innerHTML = ''
   guesses = []
   wordArray = []
-  letters.innerText = '_'
+  //letters.innerText = '_'
   word.innerHTML = ''
   hiddenArray()
 }
