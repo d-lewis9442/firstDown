@@ -10,8 +10,10 @@ body {
   font-family: 'Oswald', sans-serif;
   background-image: url(Images/field.png);
   background-repeat: no-repeat;
-  background-position: 50% 16%;
+  background-attachment: fixed;
+  background-position: 50% 1%;
   background-color: black;
+  
 }
 
 .instructions {

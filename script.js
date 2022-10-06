@@ -45,7 +45,8 @@ let hiddenArray = () => {
     'lions',
     'jaguars',
     'texans',
-    'commanders'
+    'commanders',
+    'fortyniners'
   ]
   let hiddenWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)]
   for (let i = 0; i < hiddenWord.length; i++) {

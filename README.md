@@ -1,4 +1,4 @@
-# First Down
+# First Down!
 
 ## Date: 10/1/2022
 
@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### A simple, NFL Themed word guessing game using Javascript, HTML, and CSS that is currently in progress. This games is best suited for desktop use.
+#### A simple, NFL Themed word guessing game using Javascript, HTML, and CSS that is currently in progress. This game is best suited for desktop use.
 
 ---
 
@@ -19,7 +19,8 @@
 - Vanilla Javascript
 - HTML
 - CSS
-- Trello
+- Trello link [here](https://trello.com/b/mw90XVGC/hangman)
+- Surge was used for deployment and can be viewed [here](https://firstdown.surge.sh/index.html)
 
 ---
 
@@ -37,34 +38,32 @@
 
 ##### You have 10 misses or 10 yards before the offense gets a first down.
 
-##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/mw90XVGC/hangman).
-
 ---
 
 ### **_Screenshots_**
 
 ##### Game
 
-![correctguess](/Images/game1.png)
+![correctguess](/Images/gamefinal1.png)
 
 ##### Instructions
 
-![incorrectguess](/Images/instructions1.png)
+![incorrectguess](/Images/instructionsfinal1.png)
 
 ##### Win Message
 
-![win](/Images/win1.png)
+![win](/Images/winfinal1.png)
 
 ##### Lose Message
 
-![lose](/Images/lose1.png)
+![lose](/Images/losefinal1.png)
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Add artwork for First Down
-- [ ] Deploy project
+- [ ] Add artwork for ball movement
+- [x] Deploy project
 - [ ] Add hint button
 - [ ] Link to to API for NFL related words
 
